@@ -1,6 +1,5 @@
 function showPortfolioItem(e) {
   var id = $(this).attr("href");
-  console.log(id);
   $("ul#portfolio-menu li").removeClass("active");
   var menu_item = $("ul#portfolio-menu a[href=" + id + "]");
   menu_item.parent().addClass("active"); //#7cc98b
