@@ -1,7 +1,8 @@
 function showPortfolioItem(e) {
-  var item = $(this).attr("href");
+  var id = $(this).attr("href");
+  console.log(id);
   $("ul#portfolio-menu li").removeClass("active");
-  $("ul#portfolio-menu a[href=" + item + "]").parent().addClass("active"); //#7cc98b
+  $("ul#portfolio-menu a[href=" + id + "]").parent().addClass("active"); //#7cc98b
   $(".portfolio").hide();
   $(item).fadeIn(200);
   e.preventDefault();
