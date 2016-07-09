@@ -29,7 +29,6 @@ ul#portfolio-menu li.active {
 
 .portfolio-content hr {
   height: 0px;
-  background-color: rgba(0, 0, 0, 0.0392157);
   border: none;
   border-width: 0;
   border-bottom: solid 2px rgba(0,0,0,0.04);
