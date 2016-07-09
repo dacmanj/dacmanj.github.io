@@ -25,7 +25,7 @@ function buildMenu() {
     $(items).each(function(e) {
       console.log($(this));
       console.log($(this).attr("id"));
-      console.log($("h2",this));
+      console.log($("h2",this).text());
       var new_menu_item = $("<li><a href='#" + $(this).attr("id") + "'>" + "test" + "</a></li>");
       menu.append(new_menu_item);
     })
