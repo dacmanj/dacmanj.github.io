@@ -32,7 +32,6 @@ ul#portfolio-menu li.active {
   background-color: rgba(0, 0, 0, 0.0392157);
   border: none;
   border-width: 0;
-  padding-bottom: 18px;
   border-bottom: solid 2px rgba(0,0,0,0.04);
 
 }
