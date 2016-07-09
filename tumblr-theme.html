@@ -233,268 +233,254 @@
 
 <!-- ***** Posts ***** -->
 <section id="posts" class="{PostType}">
-{block:IndexPage}
-  <section id="permalinkpage" class="text"><div class="posts_inner">
-          <div class="text_outer ">
-          <h2>About Me</h2>
-          <p>I am an Information Systems expert with Finance and Human Resources specialties, leveraging a Computer Science background to exploit opportunities for efficiencies, control costs and exceed objectives. My expertise includes experience from a wide range of responsibilities and a demonstrated ability to learn and adapt to new problems and to solve them. I’m also a home automation nerd, tech enthusiast and cyclist… and now a Certified Salesforce Administrator.</p>
-<p>I’m moving to Los Angeles in August and am available for opportunities in tech and finance at nonprofits, startups and small businesses in Los Angeles, California in September 2016.</p>
-<p align="center"><a class="button" href="https://docs.google.com/document/d/1bcZDxeA8M7eeQ8fYjzjdJOckFIGhtFjM-wz2ZOzf2xM/edit" style="line-height: 19.6px;">Resume</a></p>
-          </div>
-     </div>
-     </section>
+  {block:Posts}
 
-{/block:IndexPage}
+       {block:IndexPage}<section class="posts {PostType}"><div class="posts_inner" {block:Date}style="padding-bottom: 0!important;"{/block:Date}>{/block:IndexPage}
+       {block:PermalinkPage}<section id="permalinkpage" class="{PostType}"><div class="posts_inner">{/block:PermalinkPage}
 
-{block:PermalinkPage}
-{block:Posts}
+       {block:Text}{block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
 
-     {block:IndexPage}<section class="posts {PostType}"><div class="posts_inner" {block:Date}style="padding-bottom: 0!important;"{/block:Date}>{/block:IndexPage}
-     {block:PermalinkPage}<section id="permalinkpage" class="{PostType}"><div class="posts_inner">{/block:PermalinkPage}
-
-     {block:Text}{block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-
-          <div class="text_outer {block:Date}text_post_margin{/block:Date}">
-          {block:Title}<h2>{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h2>{/block:Title}
-          {Body}
-          </div>
-     {/block:Text}
+            <div class="text_outer {block:Date}text_post_margin{/block:Date}">
+            {block:Title}<h2>{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h2>{/block:Title}
+            {Body}
+            </div>
+       {/block:Text}
 
 
-     {block:Photo}
-          {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-          <div class="photoset-grid-lightbox_outer">
-          <div class="photopost">
-          {block:IndexPage}<a href="{Permalink}" onclick="Tumblr.Lightbox.init([{
-    'width'    : '{PhotoWidth-HighRes}',
-    'height'   : '{PhotoHeight-HighRes}',
-    'low_res'  : '{PhotoURL-HighRes}',
-    'high_res' : '{PhotoURL-HighRes}'
-  }]); return false;">{/block:IndexPage}
-          {block:PermalinkPage}{LinkOpenTag}{/block:PermalinkPage}
-          <img src="{block:IndexPage}{PhotoURL-HighRes}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" alt="{PhotoAlt}">
-          {block:IndexPage}</a>{/block:IndexPage}
-          {block:PermalinkPage}{LinkCloseTag}{/block:PermalinkPage}
-          </div>
-          </div>
+       {block:Photo}
+            {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
+            <div class="photoset-grid-lightbox_outer">
+            <div class="photopost">
+            {block:IndexPage}<a href="{Permalink}" onclick="Tumblr.Lightbox.init([{
+      'width'    : '{PhotoWidth-HighRes}',
+      'height'   : '{PhotoHeight-HighRes}',
+      'low_res'  : '{PhotoURL-HighRes}',
+      'high_res' : '{PhotoURL-HighRes}'
+    }]); return false;">{/block:IndexPage}
+            {block:PermalinkPage}{LinkOpenTag}{/block:PermalinkPage}
+            <img src="{block:IndexPage}{PhotoURL-HighRes}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" alt="{PhotoAlt}">
+            {block:IndexPage}</a>{/block:IndexPage}
+            {block:PermalinkPage}{LinkCloseTag}{/block:PermalinkPage}
+            </div>
+            </div>
 
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-      {/block:Photo}
-
-
-      {block:Photoset}
-          {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-          <div class="photoset-grid-lightbox_outer">
-          <div class="photoset-grid-lightbox" data-layout="{PhotosetLayout}" data-id="photoset{PostID}" >
-          {block:Photos}
-            <img src="{PhotoURL-500}"
-              {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}
-              {block:Caption}alt="{Caption}"{/block:caption} />
-          {/block:Photos}
-         </div>
-         </div>
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-      {/block:Photoset}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Photo}
 
 
-      {block:Panorama}
-      {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-      <div class="photoset-grid-lightbox_outer">
-          <div class="photopost">
-          {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
-          </div>
-          </div>
+        {block:Photoset}
+            {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
+            <div class="photoset-grid-lightbox_outer">
+            <div class="photoset-grid-lightbox" data-layout="{PhotosetLayout}" data-id="photoset{PostID}" >
+            {block:Photos}
+              <img src="{PhotoURL-500}"
+                {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}
+                {block:Caption}alt="{Caption}"{/block:caption} />
+            {/block:Photos}
+           </div>
+           </div>
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Photoset}
 
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-      {/block:Panorama}
+
+        {block:Panorama}
+        {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
+        <div class="photoset-grid-lightbox_outer">
+            <div class="photopost">
+            {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+            </div>
+            </div>
+
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Panorama}
 
 
 
-     {block:Quote}
-          {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-          <div class="quote-grid-lightbox_outer">
-          <div class="quote_outer">
-          {Quote}
-          </div>
-          </div>
-          {block:Source}<div class="caption">&mdash;&#8194;出典：{Source}</div>{/block:Source}
-     {/block:Quote}
+       {block:Quote}
+            {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
+            <div class="quote-grid-lightbox_outer">
+            <div class="quote_outer">
+            {Quote}
+            </div>
+            </div>
+            {block:Source}<div class="caption">&mdash;&#8194;出典：{Source}</div>{/block:Source}
+       {/block:Quote}
 
 
-     {block:Link}
-          {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-          <div class="link-grid-lightbox_outer">
-          <div class="link_outer">
-          <h2><a href="{URL}">{Name} »</a></h2>
-          <div class="link"><a href="{URL}">{URL}</a></div>
-          </div>
-          </div>
-          {block:Description}<div class="caption">{Description}</div>{/block:Description}
-     {/block:Link}
+       {block:Link}
+            {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
+            <div class="link-grid-lightbox_outer">
+            <div class="link_outer">
+            <h2><a href="{URL}">{Name} »</a></h2>
+            <div class="link"><a href="{URL}">{URL}</a></div>
+            </div>
+            </div>
+            {block:Description}<div class="caption">{Description}</div>{/block:Description}
+       {/block:Link}
 
 
-     {block:Chat}
-          {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-          <div class="chat_outer">
-          {block:Title}<h2>{Title}</h2>{/block:Title}
-          {block:Lines}
-               <li>
-               {block:Label}<span class="label">{Label}</span>{/block:Label}
-               <span class="line">{Line}</span>
-               </li>
-          {/block:Lines}
-          </div>
-     {/block:Chat}
+       {block:Chat}
+            {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
+            <div class="chat_outer">
+            {block:Title}<h2>{Title}</h2>{/block:Title}
+            {block:Lines}
+                 <li>
+                 {block:Label}<span class="label">{Label}</span>{/block:Label}
+                 <span class="line">{Line}</span>
+                 </li>
+            {/block:Lines}
+            </div>
+       {/block:Chat}
 
 
-     {block:Video}
-          {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}<div class="video-grid-lightbox_outer">
-          <div class="video-container video-wrapper">{VideoEmbed-700}</div></div>
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-     {/block:Video}
+       {block:Video}
+            {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}<div class="video-grid-lightbox_outer">
+            <div class="video-container video-wrapper">{VideoEmbed-700}</div></div>
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+       {/block:Video}
 
 
-     {block:Audio}
-          {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
-          <div class="audio-grid-lightbox_outer">
-          <div class="audio_outer pc_show">
-          {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
-          {block:AudioPlayer}{AudioPlayerGrey}{/block:AudioPlayer}
-          </div>
+       {block:Audio}
+            {block:Date}<div class="date"><a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</a></div>{/block:Date}
+            <div class="audio-grid-lightbox_outer">
+            <div class="audio_outer pc_show">
+            {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+            {block:AudioPlayer}{AudioPlayerGrey}{/block:AudioPlayer}
+            </div>
 
-          <div class="audio_outer_sp sp_show">
-          {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
-          {block:AudioPlayer}{AudioPlayerGrey}{/block:AudioPlayer}
-          </div>
-          </div>
-          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-     {/block:Audio}
-
-
-     {block:Answer}
-     <div class="question clearfix">
-     <img class="asker-avatar" src="{AskerPortraitURL-128}">
-     <div class="asker_wrapper">
-         <div class="asker">{Asker} asked:</div>
-         <div class="asker-question">{Question}</div>
-     </div>
-     </div>
-
-     {block:Answerer}
-        <div class="answer"><div class="answerer">{Answerer}</div><div class="answerer-answer">{Answer}</div></div>
-     {/block:Answerer}
-
-     <div class="replies">
-        {Replies}
-     </div>
-     {/block:Answer}
+            <div class="audio_outer_sp sp_show">
+            {block:AudioEmbed}{AudioEmbed-640}{/block:AudioEmbed}
+            {block:AudioPlayer}{AudioPlayerGrey}{/block:AudioPlayer}
+            </div>
+            </div>
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+       {/block:Audio}
 
 
-     {block:RebloggedFrom}<ul class="reblogparentname"><li class="icon-loop"></li><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul>{/block:RebloggedFrom}
+       {block:Answer}
+       <div class="question clearfix">
+       <img class="asker-avatar" src="{AskerPortraitURL-128}">
+       <div class="asker_wrapper">
+           <div class="asker">{Asker} asked:</div>
+           <div class="asker-question">{Question}</div>
+       </div>
+       </div>
+
+       {block:Answerer}
+          <div class="answer"><div class="answerer">{Answerer}</div><div class="answerer-answer">{Answer}</div></div>
+       {/block:Answerer}
+
+       <div class="replies">
+          {Replies}
+       </div>
+       {/block:Answer}
 
 
-     {block:HasTags}
-          <ul class="tags">Tagged:
-               {block:Tags}
-                    <li>
-                         <a href="{TagURL}">#{Tag}</a>
-                    </li>
-               {/block:Tags}
-          </ul>
-     {/block:HasTags}
-
-     {block:IndexPage}</div>{/block:IndexPage}
-     {block:PermalinkPage}</div>{/block:PermalinkPage}
+       {block:RebloggedFrom}<ul class="reblogparentname"><li class="icon-loop"></li><li><a href="{ReblogParentURL}">{ReblogParentName}</a></li></ul>{/block:RebloggedFrom}
 
 
-     {block:Date}
-     {block:PostNotes}
-     <div id="permalink_meta">
-     <div id="permalink_meta_inner">
-     <div id="notes_count">{NoteCount} notes</div>
-     {PostNotes}
-     </div>
-	 </div>
-	 {/block:PostNotes}
+       {block:HasTags}
+            <ul class="tags">Tagged:
+                 {block:Tags}
+                      <li>
+                           <a href="{TagURL}">#{Tag}</a>
+                      </li>
+                 {/block:Tags}
+            </ul>
+       {/block:HasTags}
+
+       {block:IndexPage}</div>{/block:IndexPage}
+       {block:PermalinkPage}</div>{/block:PermalinkPage}
 
 
-     {block:IfDisqusShortname}
-     <div id="permalink_meta">
-     <div id="permalink_meta_inner">
-     <div id="disqus">
-	 <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-	 </div>
-	 <script type="text/javascript">
-	 //<![CDATA[
-	 (function() {
-	 	 var links = document.getElementsByTagName('a');
-		 var query = '?';
-		 for(var i = 0; i < links.length; i++) {
-		 if(links[i].href.indexOf('#disqus_thread') >= 0) {
-		 query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-		 }
-		 }
-		 document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-	 })();
- 	 //]]>
-	 </script>
-	 </div>
-	 </div>
-	 {/block:IfDisqusShortname}
-	 {/block:Date}
-	 {/block:PermalinkPage}
+       {block:PermalinkPage}
+       {block:Date}
+       {block:PostNotes}
+       <div id="permalink_meta">
+       <div id="permalink_meta_inner">
+       <div id="notes_count">{NoteCount} notes</div>
+       {PostNotes}
+       </div>
+  	 </div>
+  	 {/block:PostNotes}
 
 
-     {block:Date}<div class="meta clearfix">
-     <div class="meta_inner">
-<ul class="post_share_icon">
-                            <li>
-                                <div class="dd wrapper-dropdown-3 share" tabindex="1">
-            						<span class="icon-export"></span>
-            						<ul class="dropdown">
-                                        <li>
-                                            <a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" target="_blank"><span class="icon-facebook"></span>Facebook</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" target="_blank"><span class="icon-twitter"></span>Twitter</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://plus.google.com/share?url={Permalink}" target="_blank"><span class="icon-googleplus"></span>Google+</a>
-                                        </li>
-                                        {block:NotReblog}{block:Photo}
-                                        <li>
-                                            <a href="http://pinterest.com/pin/create/button/?url={Permalink}&media={PhotoURL-HighRes}&description=" target="_blank"><span class="icon-pinterest"></span>Pinterest</a>
-                                        </li>
-                                        {/block:Photo}{/block:NotReblog}
-                                        <li>
-                                            <a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" target="_blank"><span class="icon-envelope"></span>Mail</a>
-                                        </li>
-                                        {block:IndexPage}{block:IfDisqusShortname}
-                                        <li>
-                                            <a href="{Permalink}#comments"><span class="icon-bubble"></span>Comments</a>
-                                        </li>
-                                        {/block:IfDisqusShortname}{/block:IndexPage}
-                                        {block:IndexPage}
-                                        <li>
-                                            <a href="{Permalink}" target=""><span class="icon-link"></span>Permalink</a>
-                                        </li>
-                                        {/block:IndexPage}
-                                    </ul>
-                                </div>
-                            </li>
-	                        <li>{ReblogButton color="black" size="21"}</li>
-                            <li>{LikeButton color="black" size="21"}</li>
-	                    </ul>
-     </div>
-     </div>
-     {/block:Date}
+       {block:IfDisqusShortname}
+       <div id="permalink_meta">
+       <div id="permalink_meta_inner">
+       <div id="disqus">
+  	 <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+  	 </div>
+  	 <script type="text/javascript">
+  	 //<![CDATA[
+  	 (function() {
+  	 	 var links = document.getElementsByTagName('a');
+  		 var query = '?';
+  		 for(var i = 0; i < links.length; i++) {
+  		 if(links[i].href.indexOf('#disqus_thread') >= 0) {
+  		 query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+  		 }
+  		 }
+  		 document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+  	 })();
+   	 //]]>
+  	 </script>
+  	 </div>
+  	 </div>
+  	 {/block:IfDisqusShortname}
+  	 {/block:Date}
+  	 {/block:PermalinkPage}
 
 
-     {block:IndexPage}</section>{/block:IndexPage}
-     {block:PermalinkPage}</section>{/block:PermalinkPage}
+       {block:Date}<div class="meta clearfix">
+       <div class="meta_inner">
+  <ul class="post_share_icon">
+                              <li>
+                                  <div class="dd wrapper-dropdown-3 share" tabindex="1">
+              						<span class="icon-export"></span>
+              						<ul class="dropdown">
+                                          <li>
+                                              <a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&amp;t={URLEncodedTitle}" target="_blank"><span class="icon-facebook"></span>Facebook</a>
+                                          </li>
+                                          <li>
+                                              <a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" target="_blank"><span class="icon-twitter"></span>Twitter</a>
+                                          </li>
+                                          <li>
+                                              <a href="https://plus.google.com/share?url={Permalink}" target="_blank"><span class="icon-googleplus"></span>Google+</a>
+                                          </li>
+                                          {block:NotReblog}{block:Photo}
+                                          <li>
+                                              <a href="http://pinterest.com/pin/create/button/?url={Permalink}&media={PhotoURL-HighRes}&description=" target="_blank"><span class="icon-pinterest"></span>Pinterest</a>
+                                          </li>
+                                          {/block:Photo}{/block:NotReblog}
+                                          <li>
+                                              <a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}" target="_blank"><span class="icon-envelope"></span>Mail</a>
+                                          </li>
+                                          {block:IndexPage}{block:IfDisqusShortname}
+                                          <li>
+                                              <a href="{Permalink}#comments"><span class="icon-bubble"></span>Comments</a>
+                                          </li>
+                                          {/block:IfDisqusShortname}{/block:IndexPage}
+                                          {block:IndexPage}
+                                          <li>
+                                              <a href="{Permalink}" target=""><span class="icon-link"></span>Permalink</a>
+                                          </li>
+                                          {/block:IndexPage}
+                                      </ul>
+                                  </div>
+                              </li>
+  	                        <li>{ReblogButton color="black" size="21"}</li>
+                              <li>{LikeButton color="black" size="21"}</li>
+  	                    </ul>
+       </div>
+       </div>
+       {/block:Date}
 
-{/block:Posts}
-{/block:PermalinkPage}
+
+       {block:IndexPage}</section>{/block:IndexPage}
+       {block:PermalinkPage}</section>{/block:PermalinkPage}
+
+  {/block:Posts}
 
 
      <div id="pagination">
