@@ -36,7 +36,6 @@ ul#portfolio-menu li.active {
 }
 
 a.button, a.button:link, a.button:visited {
-    background-color: {AccentColor};
     border: none;
     color: white;
     padding: 15px 32px;
