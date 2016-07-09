@@ -15,3 +15,15 @@ $().ready(function() {
    //activate hash if linked directly
    if (window.location.hash) { $("ul#portfolio-menu li a[href=" + window.location.hash + "]").parent().addClass("active"); $(window.location.hash).fadeIn(200);}
 });
+
+
+/*
+<li><a href="#responsive">Responsive Web Design</a></li>
+<li><a href="#chaptermap">Searchable Chapter Map</a></li>
+<li><a href="#sfe-website">Website Theming/CMS Implementation</a></li>
+<li><a href="#congressional-map">Congressional District Mashup</a></li>
+<li><a href="#irssearch">Nonprofit Database Search Tool</a></li>
+<li><a href="#openenrollment">Interactive Open-Enrollment Tool</a></li>
+<li><a href="#twilio">Group Text Alert App</a></li>
+<li><a href="#twilio">Group Text Alert App</a></li>
+*/
