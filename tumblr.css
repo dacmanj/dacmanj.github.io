@@ -34,3 +34,14 @@ ul#portfolio-menu li.active {
   border-bottom: solid 2px rgba(0,0,0,0.04);
 
 }
+
+a.button, a.button:link, a.button:visited {
+    background-color: {AccentColor};
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

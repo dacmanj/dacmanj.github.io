@@ -9,7 +9,7 @@
 </div>
 <div class="portfolio" id="chaptermap">
 <h2>Searchable Chapter Map</h2>
-<p>Nearly a decade ago, when I served as front-line contact I fielded dozens of requests a day for the nearest chapter of my former employer. At the time, we had a simple alphabetical list by state -- and in placed like California it was all but impossible to identify with certainty where the nearest chapter actually was for someone on the phone. One winter while home for the holidays, I built a chapter map in PHP. It was really simple with most of the work being done in the rendering of the search results. All of the administration was done in phpMyAdmin, which was cumbersome to say the least.</p>
+<p>Nearly a decade ago, when I served as front-line contact I fielded dozens of requests a day for the nearest chapter of my former employer. At the time, we had a simple alphabetical list by state -- and in places like California where there were more than 90 chapters it was all but impossible to identify the nearest chapter quickly. One winter while home for the holidays, I built a chapter map in PHP. It was really simple with most of the work being done in the rendering of the search results. All of the administration was done in phpMyAdmin, which was cumbersome to say the least.</p>
 <p>When I discovered Ruby on Rails in 2011, I rebuilt the chapter map from the ground up. I used OmniAuth to enable integration with Google Apps for authentication, Nokogiri for some background processing of IRS data, <a href="http://apneadiving.github.io/">gmaps4rails</a> for the map, markers and infowindow generation and the end result worked very smoothly. Because Ruby on Rails supports the creation of REST apis so handily, I was also able to use the app as a JSON provider for other services where I needed the dataset (e.g. Google Sheets or Google Forms -- where I was able to use the list to populate dropdowns in custom forms) or the <a href="#irssearch">IRS Nonprofit Data Search Tool</a> below.</p>
 
 <p><a href="http://map.pflag.org/embed" target="_blank"><img src="https://dacmanj.github.io/images/ChapterMap.png" /></a></p>
@@ -32,7 +32,7 @@
 <p><a href="http://nameless-anchorage-1533.herokuapp.com/index.html" target="_blank"><img src="https:dacmanj.github.io/images/NonprofitDataSearch.png" /></a></p>
 </div>
 <div class="portfolio" id="openenrollment">
-<h2>Interactive Open-enrollment Tool</h2>
+<h2>Interactive Open-Enrollment Tool</h2>
 <p>A older tool of mine, this one came into being because we offered a wide range of plans and there was no efficient way to give people the ability to adjust their coverage and get hypothetical employee contribution amounts without individual consultaition. I combined a <a href="http://www.slidesjs.com/">Slide.js</a> presentation with some custom jQuery to help employees interactively select the optimal benefits package for themselves and to guide them through the e-signature paperwork process. It certainly wasn't a the fully integrated HRIS that would have been optimal, but it met the organization's needs and allowed for a more integrated employee experience despite the number of actual systems behind the scenes.</p>
 <p>
 <p><a href="https://open-enrollment-david-manuel.herokuapp.com/index.html" target="_blank"><img src="https:dacmanj.github.io/images/OpenEnrollment.png" /></a></p>
