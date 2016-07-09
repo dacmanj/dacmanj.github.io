@@ -44,11 +44,6 @@ body {
     display: none;
   }
   p#description br:after {
-    content: "&nbsp;"
+    content: " &nbsp;"
   }
-
-  a:after {
-    content: " (" attr(href) ")";
-  }
-
 }
