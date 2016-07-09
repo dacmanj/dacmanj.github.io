@@ -43,7 +43,4 @@ body {
   p#description br {
     display: none;
   }
-  p#description br:after {
-    content: " &nbsp;"
-  }
 }
