@@ -29,7 +29,7 @@ function buildMenu() {
       console.log($(this));
       var id = $(this).attr("id");
       var text = $("h2",this).text();
-      var new_menu_item = $("<li><a href='#" + is + "'>" + text + "</a></li>");
+      var new_menu_item = $("<li><a href='#" + id + "'>" + text + "</a></li>");
       menu.append(new_menu_item);
     })
     activateHash();
