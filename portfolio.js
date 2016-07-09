@@ -11,7 +11,6 @@ $().ready(function() {
   //add github icon to github links
   $("a:contains('On Github')").html("<i class='fa fa-github' style='height: 18px;'></i>&nbsp;On Github");
    buildMenu();
-   $(".portfolio").show();
 });
 
 function activateHash() {
@@ -24,7 +23,6 @@ function buildMenu() {
     if (!menu) return;
     var items = $("div.portfolio");
     $(items).each(function(e) {
-      console.log($(this));
       var id = $(this).attr("id");
       var text = $("h2",this).text();
       var new_menu_item = $("<li><a href='#" + id + "'>" + text + "</a></li>");

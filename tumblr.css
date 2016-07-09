@@ -13,12 +13,12 @@ ul#portfolio-menu {
 
 ul#portfolio-menu li {
     display: inline-block;
-    width: 286px;
+    width: 265px;
     color: #000;
     padding: 4px 0 4px 12px;
     text-decoration: none;
     background-color: #ddd;
-    margin: 0px 0px 2px 0px;
+    margin: 0px 2px 2px 2px;
 }
 
 /* Change the link color on hover */
