@@ -31,4 +31,5 @@ ul#portfolio-menu li.active {
   height: 2px;
   background-color: rgba(0, 0, 0, 0.0392157);
   border: none;
+  border-width: 0;
 }
