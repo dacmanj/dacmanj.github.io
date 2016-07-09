@@ -1,7 +1,7 @@
 function showPortfolioItem(e) {
-  $("ul#portfolio-menu li").removeClass("active");
-  $(this).parent().addClass("active"); //#7cc98b
   var item = $(this).attr("href");
+  $("ul#portfolio-menu li").removeClass("active");
+  $("ul#portfolio-menu a[href=" + item + "]").parent().addClass("active"); //#7cc98b
   $(".portfolio").hide();
   $(item).fadeIn(200);
   e.preventDefault();
@@ -10,6 +10,7 @@ function showPortfolioItem(e) {
 $().ready(function() {
   //add github icon to github links
   $("a:contains('On Github')").html("<i class='fa fa-github' style='height: 18px;'></i>&nbsp;On Github");
+  $("a[href^=#]").click(showPortfolioItem);
    buildMenu();
 });
 
