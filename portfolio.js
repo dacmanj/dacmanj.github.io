@@ -24,7 +24,7 @@ function buildMenu() {
     var items = $("div.portfolio");
     $(items).each(function(e) {
       console.log($(this));
-      var new_menu_item = $("<li><a href='#" + $(this).attr("id") + "'>" + $(this,"h2").html() + "</a></li>");
+      var new_menu_item = $("<li><a href='#" + $(this).attr("id") + "'>" + $("h2",this).html() + "</a></li>");
       menu.append(new_menu_item);
     })
 }
