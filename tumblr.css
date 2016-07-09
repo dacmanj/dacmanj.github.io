@@ -26,3 +26,9 @@ ul#portfolio-menu li.active {
     background-color: #7cc98b;
     color: white;
 }
+
+.portfolio hr {
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.0392157);
+  border: none;
+}
