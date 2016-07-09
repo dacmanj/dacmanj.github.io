@@ -1,5 +1,3 @@
-$("#portfolio-menu li a").on('mouseover',showPortfolioItem);
-
 function showPortfolioItem(e) {
   $("ul#portfolio-menu li").removeClass("active");
   $(this).parent().addClass("active"); //#7cc98b
@@ -32,6 +30,10 @@ function buildMenu() {
       var new_menu_item = $("<li><a href='#" + id + "'>" + text + "</a></li>");
       menu.append(new_menu_item);
     })
+
+    //activate on mouseover
+    $("#portfolio-menu li a").on('mouseover',showPortfolioItem);
+
     activateHash();
 }
 
