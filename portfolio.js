@@ -14,7 +14,7 @@ $().ready(function() {
   $("a:contains('On Github')").html("<i class='fa fa-github' style='height: 18px;'></i>&nbsp;On Github");
   $("a[href^=#]").click(showPortfolioItem);
    buildMenu();
-   $(".501c3").html("&#40;c&#41;&#40;3&#41;");
+   $(".501c3").html("501&#40;c&#41;&#40;3&#41;");
 });
 
 function activateHash() {
