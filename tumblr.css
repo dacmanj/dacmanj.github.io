@@ -38,3 +38,9 @@ ul#portfolio-menu li.active {
 body {
   background-color: #bfd1da !important;
 }
+
+@media screen and (max-width: 480px) {
+  p#description br {
+    display: none;
+  }
+}
