@@ -34,3 +34,7 @@ ul#portfolio-menu li.active {
   border-bottom: solid 2px rgba(0,0,0,0.04);
 
 }
+
+body {
+  background-color: #bfd1da !important;
+}
