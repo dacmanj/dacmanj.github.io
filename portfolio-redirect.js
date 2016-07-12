@@ -23,7 +23,7 @@ switch(hash) {
     redirect = "/tagged/portfolio/#/page-1/id-147266818418";
     break;
     redirect = "/tagged/portfolio/#/page-1/id-147266640543";
-  case "":
+  case "chaptermap":
     redirect = "/tagged/portfolio/#/page-1/id-147266640543";
     break;
   default:
